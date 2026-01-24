@@ -56,7 +56,7 @@ const Page = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-linear-to-br from-[#ebe7e4] to-[#ddd9d6] text-gray-950">
+    <main className="min-h-screen bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100">
       <style>{`
         @keyframes fadeIn {
           from {
@@ -91,39 +91,39 @@ const Page = () => {
         }
       `}</style>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
+      <section className="container mx-auto px-4 py-12">
         {/* Title */}
         <h1
-          className={`${atkinsonMono.className} fade-in text-center text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold underline tracking-tight`}
+          className={`${atkinsonMono.className} fade-in text-center text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-white`}
         >
-          ABOUT ME
+          About Me
         </h1>
 
         {/* Content */}
-        <div className="mt-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div className="mt-12 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
           {/* Image */}
           <div className="w-full md:w-1/3 flex justify-center fade-in">
             <img
               src="/myself.avif"
               alt="Akash"
-              className="rounded-lg object-cover max-w-[320px] md:max-w-full shadow-md transition-shadow duration-200 hover:shadow-lg"
+              className="rounded-lg object-cover max-w-[320px] md:max-w-full shadow-lg dark:shadow-gray-900/50 transition-shadow duration-200 hover:shadow-xl"
             />
           </div>
 
           {/* Text */}
           <div className="w-full md:w-2/3 space-y-4 fade-in-delay">
-            <h2 className="text-xl sm:text-2xl font-semibold">
-              HI! I'M AKASH
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
+              Hi! I'm Akash
             </h2>
 
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               I am a highly committed and results-oriented Business Central
               Functional Consultant with over a decade of proven expertise in
               implementing, configuring, and supporting Microsoft Dynamics 365
               Business Central and Dynamics NAV.
             </p>
 
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               With extensive experience managing end-to-end project lifecycles,
               I specialize in requirements analysis, system configuration,
               integration, testing, and user training. My goal is to deliver
@@ -133,13 +133,13 @@ const Page = () => {
 
             {/* Skills */}
             <div className="pt-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-4">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 dark:text-white">
                 Professional Skills
               </h3>
 
-              <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+              <ul className="space-y-3 text-base text-gray-700 dark:text-gray-300">
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     Microsoft Dynamics 365 Business Central:
                   </span>{" "}
                   Comprehensive expertise in Business Central functionalities,
@@ -147,7 +147,7 @@ const Page = () => {
                 </li>
 
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     ERP Implementation:
                   </span>{" "}
                   Proven experience in end-to-end ERP implementations, including
@@ -156,7 +156,7 @@ const Page = () => {
                 </li>
 
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     Financial Management:
                   </span>{" "}
                   In-depth knowledge of general ledger, accounts payable and
@@ -164,7 +164,7 @@ const Page = () => {
                 </li>
 
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     Supply Chain & Inventory Management:
                   </span>{" "}
                   Proficient in inventory control, procurement, sales, and
@@ -172,7 +172,7 @@ const Page = () => {
                 </li>
 
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     Manufacturing:
                   </span>{" "}
                   Strong understanding of production processes, including BOM,
@@ -180,7 +180,7 @@ const Page = () => {
                 </li>
 
                 <li>
-                  <span className="font-semibold text-gray-900">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
                     Project Management:
                   </span>{" "}
                   Skilled in managing timelines, resources, and client
@@ -194,10 +194,10 @@ const Page = () => {
         </div>
 
         {/* Contact */}
-        <div className="flex justify-center mt-6 fade-in">
+        <div className="flex justify-center mt-8 fade-in">
           <Link
-            href="/#contact"
-            className="text-black underline transition-colors duration-200 hover:text-gray-700"
+            href="/contact"
+            className="text-blue-600 dark:text-blue-400 underline transition-colors duration-200 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
           >
             Contact me
           </Link>
@@ -206,23 +206,23 @@ const Page = () => {
         {/* Achievements */}
         <div className="mt-20 py-12">
           <h2
-            className={`${atkinsonMono.className} fade-in text-center text-2xl sm:text-3xl font-semibold mb-12 underline`}
+            className={`${atkinsonMono.className} fade-in text-center text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-white`}
           >
-            MY ACHIEVEMENTS
+            My Achievements
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
               <div
                 key={achievement.id}
-                className="achievement-card bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500 transition-shadow duration-200 hover:shadow-lg"
+                className="achievement-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md p-6 border-t-4 border-blue-600 transition-shadow duration-200 hover:shadow-lg"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 <div className="text-4xl mb-4">{achievement.icon}</div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {achievement.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">
+                <p className="text-base text-gray-600 dark:text-gray-300">
                   {achievement.description}
                 </p>
               </div>

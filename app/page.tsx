@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link"; // Make sure Link is imported for the "Read More" buttons
+import PricingSlideshow from "@/components/PricingSlideshow";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 
           <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary focus-within:ring-opacity-20 dark:focus-within:border-primary">
             <form
-              action="https://www.creative-tim.com/twcomponents/search"
+              action=""
               className="flex flex-wrap justify-between md:flex-row"
             >
               <input
@@ -71,7 +72,11 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">
             Choose Your Plan
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Slideshow for small screens, Grid for md and above */}
+          <div className="md:hidden">
+            <PricingSlideshow />
+          </div>
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Pricing Card 1: Basic */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col items-center text-center">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Basic</h3>
